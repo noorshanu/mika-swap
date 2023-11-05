@@ -155,7 +155,7 @@ export const MenuDropdown = () => {
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
-                <PrimaryMenuRow to="/vote" close={toggleOpen}>
+                {/* <PrimaryMenuRow to="/vote" close={toggleOpen}>
                   <Icon>
                     <GovernanceIcon width={24} height={24} color={theme.neutral1} />
                   </Icon>
@@ -170,7 +170,7 @@ export const MenuDropdown = () => {
                   <PrimaryMenuRow.Text>
                     <Trans>View more analytics</Trans>
                   </PrimaryMenuRow.Text>
-                </PrimaryMenuRow>
+                </PrimaryMenuRow> */}
                 <Box
                   onClick={() =>
                     openDownloadApp({
@@ -178,7 +178,7 @@ export const MenuDropdown = () => {
                     })
                   }
                 >
-                  <PrimaryMenuRow close={toggleOpen}>
+                  {/* <PrimaryMenuRow close={toggleOpen}>
                     {isAndroidGALaunched ? (
                       <>
                         <Icon>
@@ -203,7 +203,7 @@ export const MenuDropdown = () => {
                         </PrimaryMenuRow.Text>
                       </>
                     )}
-                  </PrimaryMenuRow>
+                  </PrimaryMenuRow> */}
                 </Box>
               </Column>
               <Separator />
@@ -214,7 +214,7 @@ export const MenuDropdown = () => {
                 alignItems={{ sm: 'center', md: 'flex-start' }}
                 paddingX="8"
               >
-                <SecondaryLinkedText href="https://help.uniswap.org/en/">
+                {/* <SecondaryLinkedText href="https://help.uniswap.org/en/">
                   <Trans>Help center</Trans> ↗
                 </SecondaryLinkedText>
                 <SecondaryLinkedText href="https://docs.uniswap.org/">
@@ -230,8 +230,8 @@ export const MenuDropdown = () => {
                   }}
                 >
                   <Trans>Legal & Privacy</Trans> ↗
-                </SecondaryLinkedText>
-                {(isDevelopmentEnv() || isStagingEnv()) && (
+                </SecondaryLinkedText> */}
+                {/* {(isDevelopmentEnv() || isStagingEnv()) && (
                   <SecondaryLinkedText
                     onClick={() => {
                       toggleOpen()
@@ -240,7 +240,7 @@ export const MenuDropdown = () => {
                   >
                     <Trans>Feature Flags</Trans>
                   </SecondaryLinkedText>
-                )}
+                )} */}
               </Box>
               <IconRow>
                 <Icon href="https://discord.com/invite/FCfyBSbCU5">
