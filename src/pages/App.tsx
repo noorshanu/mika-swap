@@ -183,17 +183,19 @@ export default function App() {
             </Suspense>
             <Suspense fallback={<Loader />}>
               {isLoaded ? (
-                <Routes>
-                  {routes.map((route: RouteDefinition) =>
-                    route.enabled(routerConfig) ? (
-                      <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
-                        {route.nestedPaths.map((nestedPath) => (
-                          <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
-                        ))}
-                      </Route>
-                    ) : null
-                  )}
-                </Routes>
+           <Routes>
+           {/* Custom Route for root URL */}
+           <Route path="/" element={<Navigate to="/swap" replace />} />
+           {routes.map((route: RouteDefinition) =>
+             route.enabled(routerConfig) ? (
+               <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
+                 {route.nestedPaths.map((nestedPath) => (
+                   <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
+                 ))}
+               </Route>
+             ) : null
+           )}
+         </Routes>
               ) : (
                 <Loader />
               )}
